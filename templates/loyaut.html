@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {%block title%} {% endblock%}
+
+    <link rel="stylesheet" href="{{url_for('static',filename='index.css')}}" />
+  </head>
+  <body>
+    <!--NAVBAR SECTİON-->
+
+    <section id="header">
+      <div class="container">
+        <div class="head">
+          <div class="navbar">
+            <div class="logo">
+              <h3>TETEaTALK</h3>
+            </div>
+            <nav>
+              <ul>
+                <li class="menu"><a href="/">Home</a></li>
+                <li class="menu"><a href="/#project">Product</a></li>
+                <li class="menu"><a href="/#about">AboutMe</a></li>
+                <li class="menu"><a href="/chat">ChatBot</a></li>
+                <li
+                  class="menu"
+                  style="
+                    border: 3px solid white;
+                    background-color: #888a8c;
+                    padding: 8px 15px;
+                    border-radius: 10px;
+                  "
+                >
+                  <a href="/login">
+                    {% if name %}
+                    <p>{{name}}</p>
+                    <ul>
+                      <li><a href="/settings">Settings</a></li>
+                      <li><a href="/logout">Logout</a></li>
+                    </ul>
+                    {% else %}
+                    <p>Login/Signup</p>
+                    {% endif %}
+                  </a>
+                </li>
+                <div class="mobile-nav" id="mobille">
+                  <a
+                    id="kapat"
+                    style="position: fixed; margin-left: -30px"
+                    href="#"
+                    >Menu</a
+                  >
+                  <ul class="mobile">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/#project">Product</a></li>
+                    <li><a href="/#about">AboutMe</a></li>
+                    <li><a href="/chat">ChatBot</a></li>
+                    <li>
+                        {% if name %}
+                        <p>{{name}}</p>
+                        <ul>
+                          <li><a href="/settings">Settings</a></li>
+                          <li><a href="/logout">Logout</a></li>
+                        </ul>
+                        {% else %}
+                        <a href="/login"><p>Login/Signup</p></a>
+                        {% endif %}
+                    </li>
+                  </ul>
+                </div>
+              </ul>
+            </nav>
+          </div>
+          <div class="hero">{%block hero%} {% endblock%}</div>
+        </div>
+      </div>
+    </section>
+
+    {%block body%} {% endblock%}
+
+    {%block deneme%} {% endblock%}
+  
+    <script src="{{url_for('static',filename='navbar.js')}}"></script>
+  </body>
+</html>

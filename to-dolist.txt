@@ -1,0 +1,19 @@
+
+
+
+
+
+--> token oluşturma ve çözme tamamlandır 
+-->> süre kontorlü yapılacak
+
+
+--> Kullanıcı User modeli hazırlanmalı 
+-->> mongodb database işlemleri yapılmalı
+
+
+->speech2 text klasörünün alt tarafına kodlar yapıştırdım
+onları düznle
+
+
+
+-->token çözülürken geri dönderilen token verisinne bak

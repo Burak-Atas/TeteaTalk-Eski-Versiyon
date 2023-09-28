@@ -1,0 +1,33 @@
+{% extends "loyaut.html" %}
+
+{% block title%}
+  <title>Login</title>
+{% endblock %}
+
+{% block hero%} 
+<div class="form">
+  <h2>Login</h2>
+  <form action="/login" name="login" method="POST">
+    <div class="bor">
+      <label for="email">&nbsp;Email &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label> 
+      <input type="email" name="email" placeholder="please your mail">
+    </div>
+    <div class="bor">
+      <label for="password">Password </label>
+      <input type="password" name="password" placeholder="please your passowrd" required>
+    </div>
+    
+    <input type="submit" value="login">
+    <div class="text">
+      Bir Hesabınız yok mu? kaydolmak için <a href="/signup">tıklayın</a> .
+    </div>
+  </form>
+  {% if error %}
+  <p style="color:white">
+    {{error}}
+  </p>
+  {% endif %} 
+</div>
+  
+{% endblock%}
+

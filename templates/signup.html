@@ -1,0 +1,43 @@
+{% extends "loyaut.html"%}
+
+{% block title%}
+  <title>Signup</title>
+{% endblock %}
+{% block hero%}
+<div class="form" style="margin-top: -140px;">
+  <h2>Signup</h2>
+  <form action="/signup" name="signup" method="POST">
+    <div class="bor">
+    <label for="first_name"> First Name  &nbsp;&nbsp;&nbsp;</label>
+    <input type="text"  placeholder="First Name" name="first_name" required>
+  </div>
+  <div class="bor">
+    <label for="last_name"> Last Name   &nbsp;&nbsp;&nbsp; </label>
+    <input type="text"  placeholder="Last Name" name="last_name" required>
+  </div>
+  <div class="bor">
+    <label for="email"> Email &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </label>
+    <input type="email"  placeholder="E-mail" name="email" required>
+  </div>
+  <div class="bor">
+    <label for="password">Password  &nbsp;&nbsp;&nbsp;&nbsp;</label>
+    <input type="password" placeholder="password" name="password" required>
+  </div>
+  <div class="bor">
+    <label for="t_password">Confirm  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;</label>
+    <input type="password" placeholder="confirm password" name="t_password" required>
+  </div>
+    <input type="submit" value="Sıgnup">
+    <div class="text">
+      Bir Hesabınız var mı? giriş yapmak için <a href="/login">tıklayınız</a> .
+    </div>
+  </form>
+  {% if error %}
+  <p style="color:white">
+    {{error}}
+  </p>
+  {% endif %} 
+</div>
+
+{% endblock%}
+

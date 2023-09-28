@@ -1,0 +1,180 @@
+
+.containerf {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+/* product Section */
+#product .product {
+    flex-direction: column;
+    text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 100px 0;
+  }
+  #product .product-top {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  #product .product-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+  }
+  #product .product-item {
+    flex-basis: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 10px;
+    background-image: url(./img/img-1.png);
+    background-size: cover;
+    margin: 10px 5%;
+    position: relative;
+    z-index: -11;
+    overflow: hidden;
+  }
+  #product .product-item::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    opacity: 0.9;
+    z-index: -1;
+  }
+  #product .product-bottom .icon {
+    height: 80px;
+    width: 80px;
+    margin-bottom: 20px;
+  }
+  #product .product-item h2 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  #product .product-item p {
+    color: white;
+    text-align: left;
+  }
+  /* End product Section */
+  
+
+  
+footer {
+	background-color: #29323c;
+}
+
+
+.containerfooter{
+	max-height: 100vh;
+	padding-top: 60px;
+	padding-bottom: 40px;
+}
+
+.contact{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	border-bottom: 1px solid white;
+}
+
+.contact img{
+  width: 70px;
+}
+.contact-item{
+	text-align: center;
+	color: white;
+	margin: 20px;
+}
+.contact-item h2,h3{
+	margin: 8px;
+}
+
+.fastlink{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin: 100px;
+}
+
+.fastlink .logo{
+	max-width: 400px;
+}
+
+.fastlink .links a {
+	color: white;
+	font-size: 22px;
+}
+
+.fastlink .links a:hover {
+	color: red;
+
+}
+
+
+.copriyt {
+	text-align: center;
+	border-bottom: 2px solid white ;
+}
+
+.copriyt p{
+	color: aliceblue;
+	margin-bottom: 20px;
+}
+
+.fastlink .links li{
+  margin-top: 6px;
+}
+
+footer h1{
+	text-align: center;
+	font-size: 50px;
+	color: wheat;
+	margin-bottom: 40px;
+}
+
+footer h1 span{
+	color: red;
+}
+
+.abouttext p{
+	color: white;
+}
+
+
+
+@media only screen and (max-width: 1200px) {
+
+  .containerfooter{
+    max-height: 1500px;
+  }
+
+  .contact{
+    display: block;
+  }
+  .contact .contact-item{
+    border-bottom: 1px solid white;
+  }
+
+  .fastlink{
+    display: block;
+    margin: 20px;
+    text-align: center;
+  }
+  .fastlink .links{
+    margin-top: 20px;
+  }
+
+  
+
+}

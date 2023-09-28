@@ -1,0 +1,6 @@
+Flask==2.0.2
+gunicorn
+openai
+google-cloud-texttospeech
+pymongo==4.3.3
+pyjwt==2.6.0

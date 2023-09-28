@@ -1,0 +1,40 @@
+{% extends "loyaut.html" %} 
+
+{% block title%}
+  <title>TeteaTalk Chatbot</title>
+{% endblock %}
+
+
+{% block hero%}
+
+<div class="chat-bot">
+  <div class="chat-container">
+    <div class="chat">
+
+    </div>
+    <div class="chat messages">
+      
+    </div>
+  </div>
+  <div class="input">
+    <textarea
+      style="display: none"
+      class="content"
+      readonly
+      placeholder="to speak for click button"
+    ></textarea>
+    <button class="talk">Talk</button>
+  </div>
+</div>
+<div class="promt">
+  <form action="/updatepromt" style="margin-top: 10px;"  method="POST" >
+    <input type="text"  name="promt" style="width: 80%;" required >
+    <input type="submit" value="promt" style="padding: 5px 10px;">
+  </form>
+</div>
+
+
+
+<script src="{{url_for('static',filename='ajax.js')}}"></script>
+{% endblock %}
+
