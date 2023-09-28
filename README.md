@@ -1,0 +1,1 @@
+# TeteaTalk-Eski-Versiyon
